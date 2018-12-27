@@ -1,0 +1,63 @@
+// Note pad shows up and hides on page load;
+@keyframes notesPop{
+    0%{
+       transform: translateY(-100%);     
+    }
+    25%{
+        transform: translateY(0);
+        box-shadow: 2px 2px 2px 2px var(--color-secondary-dark);
+    }
+    50%{
+        transform: translateY(0);
+        box-shadow: 2px 2px 2px 2px var(--color-secondary-dark);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+// Border hover animation
+@keyframes headingBorder{
+    0%{
+width: 0;
+height: 0;
+border-top-color: var(--color-primary);
+border-left-color: var(--color-primary);
+border-bottom-color: transparent;
+border-right-color: transparent;  
+    }
+    50%{
+width: 100%;
+height: 100%;
+border-top-color: var(--color-primary);
+border-left-color: var(--color-primary);
+border-bottom-color: transparent;
+border-right-color: transparent;
+    }
+    100%{
+width: 100%;
+height: 100%;
+border-top-color: var(--color-primary);
+border-left-color: var(--color-primary);
+border-bottom-color: transparent;
+border-right-color: transparent;
+    }
+}
+
+// Scroll arrow animation
+@keyframes scrollArrow{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+        transform: translateX(20rem)
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        
+        transform: translateX(20rem)
+    }
+}

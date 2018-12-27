@@ -1,0 +1,241 @@
+.content{ 
+    padding: 2rem 8rem;
+    width: 100%;
+    min-height: 68rem;
+    height: 100vh;
+    background-image: url('../img/main_background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    @media only screen and (max-width: 1250px){
+        padding: 1rem 4rem;
+        background-position: 70%;
+    }
+    @media only screen and (max-width: 1250px){
+        padding: 1rem 4rem;
+        background-position: 80%;
+    }
+    @media only screen and (max-width: 800px){
+        padding: 0;
+        background-position: 85%;
+    }
+
+//________________________NAME________________________
+    &__name{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem 0;
+        @media only screen and (max-width: 900px){
+            align-items: center;
+        }
+    }
+    &__initials{
+        font-size: 4rem;
+        color: var(--color-secondary-dark);
+        border-left: 1px solid var(--color-primary-light);
+        z-index: 100;
+        @media only screen and (max-width: 900px){
+            border-left: none;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+    }
+    &__full-name{
+        font-size: 1.8rem;
+        color: var(--color-secondary-dark);
+        border-top: 1px solid var(--color-primary);
+        border-right: 1px solid var(--color-primary);
+        padding-right: .3rem;
+        z-index: 100;
+        @media only screen and (max-width: 900px){
+            border-right: none;
+        }
+    }
+//________________________CONTAINER________________________
+    &__container{
+        margin: 0;
+        max-width: 136rem; 
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        &::before{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-style: solid;
+            border-width: 5px;
+            border-image-slice: 1; 
+            border-image-width: 0px 0px 3px 3px; 
+            border-image-outset: 0px 0px 3px 3px; 
+            border-image-repeat: repeat; 
+            border-image-source: linear-gradient(to top, var(--color-primary) 30%, var(--color-secondary) 60%);
+            bottom: -2rem;
+            left: -2rem;
+            z-index: 0;
+            @media only screen and (max-width: 900px){
+                content: none;
+            }
+        }
+    }
+} 
+//________________________DECORATIONS________________________
+// Squares decoration visibilty and transition for on load event
+.decoration{
+    opacity: 0;
+    transition: opacity 1s;
+
+    @media only screen and (max-width: 900px){
+        // display: none;
+    }
+
+    &:nth-child(1){
+        position: absolute;
+        width: 40rem;
+        height: 40rem;
+        background-color: transparent;
+        border: .2rem solid var(--color-secondary);
+        transform: rotate(45deg);
+        top: 0rem;
+        left: 0rem;
+        @media only screen and (max-width: 900px){
+            width: 20rem;
+            height: 20rem;
+            top: 11rem;
+            left: 4rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(2){
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        background-color: transparent;
+        border: .1rem solid var(--color-tertiary);
+        transform: rotate(75deg);
+        top: 16rem;
+        left: -8rem;
+        @media only screen and (max-width: 900px){
+            width: 12rem;
+            height: 12rem;
+            top: 23rem;
+            left: 8rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(3){
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        background-color: transparent;
+        border: .2rem solid var(--color-primary);
+        transform: rotate(20deg);
+        top: 14rem;
+        left: -4rem;
+        @media only screen and (max-width: 900px){
+            width: 8rem;
+            height: 8rem;
+            top: 34rem;
+            left: 5rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(4){
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: .2rem solid var(--color-primary);
+        transform: rotate(30deg);
+        bottom: 6rem;
+        right: 16rem;
+        @media only screen and (max-width: 900px){
+            top: 21rem;
+            left: 19rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(5){
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        background-color: transparent;
+        border: .2rem solid var(--color-4-dark);
+        transform: rotate(20deg);
+        bottom: 10rem;
+        right: 6rem;
+        @media only screen and (max-width: 900px){
+            top: 39rem;
+            left: 9rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(6){
+        position: absolute;
+        width: 8rem;
+        height: 8rem;
+        background-color: transparent;
+        border: .1rem solid var(--color-tertiary);
+        transform: rotate(65deg);
+        bottom: 10rem;
+        right: 12rem;
+        @media only screen and (max-width: 900px){
+            display: none;
+        }
+    }
+    &:nth-child(7){
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        border: .1rem solid var(--color-primary-light);
+        transform: rotate(95deg);
+        bottom: 12rem;
+        right: 8rem;
+        @media only screen and (max-width: 900px){
+            top: 48rem;
+            left: 12rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(8){
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        background-color: transparent;
+        border: .2rem solid var(--color-primary-light);
+        transform: rotate(95deg);
+        top: 8rem;
+        right: 30rem;
+        @media only screen and (max-width: 900px){
+            top: 48rem;
+            left: 16rem;
+            transform: rotate(0);
+        }
+    }
+    &:nth-child(9){
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: .1rem solid var(--color-secondary-dark);
+        transform: rotate(95deg);
+        top: 6rem;
+        right: 30rem;
+        @media only screen and (max-width: 900px){
+            top: 51rem;
+            left: 14rem;
+            transform: rotate(0);
+        }
+    }
+}
+
